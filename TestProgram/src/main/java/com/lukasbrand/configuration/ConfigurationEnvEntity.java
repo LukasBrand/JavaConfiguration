@@ -4,7 +4,7 @@ import com.lukasbrand.configuration_processor.EnvConfiguration;
 import com.lukasbrand.configuration_processor.annotations.Configuration;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class ConfigurationEnvEntity implements EnvConfiguration<ConfigurationEnvEntity> {
+public abstract class ConfigurationEnvEntity implements EnvConfiguration {
     private final @NotNull String name;
     private final @NotNull String surname;
     private final int age;

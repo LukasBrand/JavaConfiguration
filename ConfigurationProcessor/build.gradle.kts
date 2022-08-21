@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.github.javaparser:javaparser-symbol-solver-core:3.24.4")
     testImplementation(kotlin("test"))
 }
 

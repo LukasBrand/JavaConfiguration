@@ -1,8 +1,6 @@
 package com.lukasbrand.configuration_processor
 
-import java.util.function.Consumer
-
-sealed interface Configuration<C : Configuration<C>> {
+sealed interface Configuration {
 
     interface Context {
         fun getName(): String
@@ -11,8 +9,6 @@ sealed interface Configuration<C : Configuration<C>> {
 
         fun getConfigurationManager(): ConfigurationManager
     }
-
-    fun onChange(callback: Consumer<C>)
 
     fun save()
 

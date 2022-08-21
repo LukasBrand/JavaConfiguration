@@ -17,6 +17,10 @@ public class GeneratedConfigurationAll extends ConfigurationAllEntity {
         return new GeneratedConfigurationAll("a", "b", 1, new GeneratedConfigurationAllContext(configurationManager));
     }
 
+    public void onChange(final @NotNull Consumer<ConfigurationAllEntity> callback) {
+        callback.accept(this);
+    }
+
     @Override
     public void save() {
         context.getConfigurationManager().save(this);
@@ -28,10 +32,6 @@ public class GeneratedConfigurationAll extends ConfigurationAllEntity {
         return context;
     }
 
-    @Override
-    public void onChange(final @NotNull Consumer<ConfigurationAllEntity> callback) {
-        callback.accept(this);
-    }
 
     private static class GeneratedConfigurationAllContext implements Context {
 
